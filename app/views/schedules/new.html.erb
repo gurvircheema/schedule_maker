@@ -1,0 +1,8 @@
+<h2>New Schedule</h2>
+
+<%= simple_form_for @schedule, as: :schedule, url: schedules_path, html: { class: 'form' } do |f| %>
+  <%= render 'form', f: f %>
+  <% end %>
+
+  <br>
+  <%= link_to 'Back', schedules_path, class: 'btn btn-sm btn-default' %>

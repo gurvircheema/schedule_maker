@@ -1,0 +1,41 @@
+<div class="page-header">
+  <h1>Listing schedules</h1>
+</div>
+
+<% if @schedules.empty? %>
+  <div class="alert alert-warning">
+    No schedules exist right now
+  </div>
+<% else %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Week Number</th>
+        <th>Week Day</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>User</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @schedules.each do |schedule| %>
+        <tr>
+          <td><%= schedule.week %></td>
+          <td><%= schedule.weekday %></td>
+          <td><%= schedule.start_time %></td>
+          <td><%= schedule.end_time %></td>
+          <td><%= schedule.user %></td>
+          <td>
+            <%= link_to 'Show', schedule_path(schedule), class: 'btn btn-xs btn-default' %>
+            <%= link_to 'Edit', edit_schedule_path(schedule), class: 'btn btn-xs btn-default' %>
+            <%= link_to 'Destroy', schedule_path(schedule), method: :delete, class: 'btn btn-xs btn-default', data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end -%>
+
+<%= link_to 'New schedule', new_schedule_path, class: 'btn btn-sm btn-success' %>

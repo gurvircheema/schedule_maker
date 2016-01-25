@@ -1,0 +1,36 @@
+
+<h2>This week's Schedule</h2>
+<p>Pick a Date</p>
+<p>Extract week from it</p>
+<p>Select all schedules for that week</p>
+<p>Render all schedules into a tables of users and weekdays eg</p>
+<p>
+<table width="90%" text-align="center">
+  <tr>
+    <th>Employee</th>
+    <th><%= @mon.strftime("%A %b %d") %></th>
+    <th><%= @tues.strftime("%A %b %d") %></th>
+    <th><%= @wed.strftime("%A %b %d") %></th>
+    <th><%= @thurs.strftime("%A %b %d") %></th>
+    <th><%= @fri.strftime("%A %b %d") %></th>
+    <th><%= @sat.strftime("%A %b %d") %></th>
+    <th><%= @sun.strftime("%A %b %d") %></th>
+  </tr>
+  <tr>
+    <td>Gurvir Cheema</td>
+    <td>4:00pm - 11:00pm</td>
+    <td>4:00pm - 11:00pm</td>
+    <td>Off</td>
+    <td>4:00pm - 11:00pm</td>
+    <td>4:00pm - 11:00pm</td>
+    <td>Off</td>
+    <td>4:00pm - 11:00pm</td>
+  </tr>
+  <tr>
+    <td><%= @mon %></td>
+    <td><%= @tues %></td>
+  </tr>
+</table>
+
+and so on for every user
+  </p>

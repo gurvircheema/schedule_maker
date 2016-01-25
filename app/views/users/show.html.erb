@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h1>User Information</h1>
+</div>
+<p>
+  <strong>First Name</strong>
+  <%= @user.first_name %>
+</p>
+<p>
+  <strong>Last Name</strong>
+  <%= @user.last_name %>
+</p>
+<p>
+  <strong>Contact</strong>
+  <%= @user.contact %>
+</p>
+<p>
+  <strong>Email</strong>
+  <%= @user.email %>
+</p>
+<p>
+  <strong>User type</strong>
+  <%= @user.type %>
+</p>
+
+<%= link_to 'Back', users_path, class: 'btn btn-sm btn-info' %>

@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h1>schedule Information</h1>
+</div>
+<p>
+  <strong>Week of the year</strong>
+  <%= @schedule.week %>
+</p>
+<p>
+  <strong>Weekday</strong>
+  <%= @schedule.weekday %>
+</p>
+<p>
+  <strong>Shift Start Time</strong>
+  <%= @schedule.start_time %>
+</p>
+<p>
+  <strong>Shift End Time</strong>
+  <%= @schedule.end_time %>
+</p>
+<p>
+  <strong>User name</strong>
+  <%= @schedule.user %>
+</p>
+
+<%= link_to 'Back', schedules_path, class: 'btn btn-sm btn-info' %>
